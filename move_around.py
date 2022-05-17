@@ -40,7 +40,7 @@ def rotate(angle_speed=ANGLE_SPEED, clockwise=0):
         current_angle = angular_speed*(t1-t0)
 
 
-    #Forcing our robot to stop
+    # Forcing our robot to stop
     vel_msg.angular.z = 0
     velocity_publisher.publish(vel_msg)
     # rospy.spin()
@@ -59,11 +59,11 @@ def forward(speed=SPEED):
     vel_msg.angular.z = 0
 
 
-        #Setting the current time for distance calculus
+    # Setting the current time for distance calculus
     t0 = rospy.Time.now().to_sec()
     current_distance = 0
 
-        #Loop to move the turtle in an specified distance
+    # Loop to move the turtle in an specified distance
     while(current_distance < 0.25):
             #Publish the velocity
         velocity_publisher.publish(vel_msg)
@@ -71,9 +71,9 @@ def forward(speed=SPEED):
         t1=rospy.Time.now().to_sec()
             #Calculates distancePoseStamped
         current_distance= speed*(t1-t0)
-        #After the loop, stops the robot
+    # After the loop, stops the robot
     vel_msg.linear.x = 0
-        #Force the robot to stop
+    # Force the robot to stop
     velocity_publisher.publish(vel_msg)
 
 
