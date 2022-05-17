@@ -14,7 +14,7 @@ Follow instructions in https://github.com/AutonomyLab/create_robot to install ro
     ```
     This command echoes the topic battery/charge_ration, which prints the current charge of the robot in a percent format.
     
-## Get the roomba take in a series of discrete actions
+## Get the roomba to take a series of discrete actions
 To move the Roomba with a series of actions, we need to follow a similar procedure in the Turtlesim movement tutorial: https://wiki.ros.org/turtlesim/Tutorials/Moving%20in%20a%20Straight%20Line
 
 1. Create the package
