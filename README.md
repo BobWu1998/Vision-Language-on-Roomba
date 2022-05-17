@@ -34,4 +34,8 @@ To move the Roomba with a series of actions, we need to follow a similar procedu
     cd ~/create_ws
     catkin_make
     ```
-4. Put the 
+4. Put the "move_around.py" file in the directory
+    ```
+    cd ~/create_ws/src/move_cmds/src
+    # put the file there
+    ```
