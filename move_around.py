@@ -7,19 +7,18 @@ SPEED = 0.2
 ANGLE_SPEED = 30 # degree/s
 
 def rotate(angle_speed=ANGLE_SPEED, clockwise=0):
-    #Starts a new node
+    # Starts a new node
     rospy.init_node('roomba', anonymous=True)
     velocity_publisher = rospy.Publisher('/cmd_vel', Twist, queue_size=10)
     vel_msg = Twist()
 
-    angle = 15 #input("Type your distance (degrees):")
-    # clockwise = 1 #input("Clockwise?: ") #True or false
+    angle = 15 # degrees
 
-    #Converting from angles to radians
-    angular_speed = ANGLE_SPEED*2*PI/360 #speed*2*PI/360
+    # Converting from angles to radians
+    angular_speed = ANGLE_SPEED*2*PI/360 # in radius
     relative_angle = angle*2*PI/360
 
-    #We wont use linear components
+    # We won't use linear components
     vel_msg.linear.x=0
     vel_msg.linear.y=0
     vel_msg.linear.z=0
@@ -80,12 +79,6 @@ def forward(speed=SPEED):
 
 if __name__ == '__main__':
     try:
-        #Testing our function
-        # forward()
-        # rotate()
-        # forward()
-        # forward()
-        # rotate()
         cmd_list = input("Your cmds:")
         for cmd in cmd_list:
             if cmd == '0':
