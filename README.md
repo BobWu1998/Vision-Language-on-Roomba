@@ -1,6 +1,6 @@
 # Vision-Language-on-Roomba
 ## Connect to the roomba and move it around with commands
-Follow instructions in https://github.com/AutonomyLab/create_robot to install ros and build a workspace.
+Follow instructions in https://github.com/AutonomyLab/create_robot to install ROS and build a workspace.
 1. Source the workspace
 2. Launch files using roslaunch
 3. To move the Roomba with a certain linear and angular velocity:
