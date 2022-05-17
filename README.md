@@ -20,7 +20,7 @@ To move the Roomba with a series of actions, we need to follow a similar procedu
 1. Create the package
     ```
     cd ~/create_ws/src
-    catkin_create_pkg move_cmds
+    catkin_create_pkg move_cmds geometry_msgs rospy
     ```
 2. Build the workspace
     ```
