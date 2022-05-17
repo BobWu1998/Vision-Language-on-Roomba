@@ -39,3 +39,14 @@ To move the Roomba with a series of actions, we need to follow a similar procedu
     cd ~/create_ws/src/move_cmds/src
     # put the file there
     ```
+5. Make the node executable:
+    ```
+    chmod u+x ~/create_ws/src/move_cmds/src/move_around.py
+    ```
+Once you have the file placed there, you can run it with
+    ```
+    rosrun move_cmds move_around.py
+    ```
+When the file prompts for input, you can type a series of number from 0 to 2 to give the Roomba a series of instructions to move around.
+
+For instance: With the input of '021', the robot will do the following: turn left by 15&deg;, move forward by 0.25m, turn right by 15&deg;.
